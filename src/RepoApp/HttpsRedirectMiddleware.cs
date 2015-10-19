@@ -17,7 +17,7 @@ namespace RepoApp
 
         public async Task Invoke(HttpContext context)
         {
-            if (!context.Request.HttpContext.Request.IsHttps)
+            if (!context.Request.IsHttps)
             {
                 HandleNonHttpsRequest(context);
             }
